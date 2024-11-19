@@ -23,6 +23,13 @@
   </section>
 {% endif %}
 
+<style>
+  .announcement-bar { /* Correction du nom de la classe ici */
+    background: {{ section.settings.background }};
+    color: {{ section.settings.text_color }};
+  }
+</style>
+
 {% schema %}
 {
   "name": "Announcement Bar",
@@ -38,6 +45,18 @@
       "id": "image",
       "label": "Pick Image",
       "info": "PNG recommended format"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#F4F4F4"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#000000"
     }
   ],
   "presets": [
