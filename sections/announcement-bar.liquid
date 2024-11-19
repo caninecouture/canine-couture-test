@@ -1,5 +1,26 @@
 {% if section.settings['show-announcement'] %}
-  <section>hello</section>
+  <section>
+    <div class="announcement-bar">
+      <div class="annoucement-bar-left-section">
+        {% if section.settings.image != blank %}
+          <img
+            width="40"
+            height="40"
+            loading="lazy"
+            scr="{{ section.settings.image |  image_url  }}"
+          >
+        {% else %}
+          <img
+            width="40"
+            height="40"
+            loading="lazy"
+            scr="{{ 'FavIcone.png' |  asset_url  }}"
+          >
+        {% endif %}
+      </div>
+      <div class="annoucement-bar-right-section"></div>
+    </div>
+  </section>
 {% endif %}
 
 {% schema %}
@@ -11,6 +32,12 @@
       "id": "show-announcement",
       "label": "Show Announcement",
       "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "pick image",
+      "info": "png recommended format"
     }
   ],
   "presets": [
