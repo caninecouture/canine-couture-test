@@ -1,20 +1,19 @@
-<section>helo</section>
+<section>hello</section>
 
 {% schema %}
 {
   "name": "Announcement Bar",
-  "settings": [],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show-announcement",
+      "label": "Show Announcement",
+      "default": true
+    }
+  ],
   "presets": [
     {
-      "name": "announcement-bar",
-      "settings": [
-        {
-          "type": "checkbox",
-          "id": "show-announcement",
-          "label": "Show Announcement",
-          "default": true
-        }
-      ]
+      "name": "Default"
     }
   ]
 }
