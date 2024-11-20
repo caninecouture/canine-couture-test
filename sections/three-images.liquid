@@ -1,29 +1,29 @@
 <section>
   <div class="three-images-wrapper">
     {% if section.settings.image1 != blank %}
-      <div class="one-user">
+      <div class="one-user" style="background-image: url('{{ section.settings.image1 | image_url }}');">
         <h3></h3>
       </div>
     {% else %}
-      <div class="one"></div>
+      <div class="one" style="background-image: url('{{ 'image-1.png' | asset_url }}');"></div>
       <h3></h3>
     {% endif %}
 
     {% if section.settings.image2 != blank %}
-      <div class="two-user">
+      <div class="two-user" style="background-image: url('{{ section.settings.image2 | image_url }}');">
         <h3></h3>
       </div>
     {% else %}
-      <div class="two"></div>
+      <div class="two" style="background-image: url('{{ 'image-2.png' | asset_url }}');"></div>
       <h3></h3>
     {% endif %}
 
     {% if section.settings.image3 != blank %}
-      <div class="three-user">
+      <div class="three-user" style="background-image: url('{{ section.settings.image3 | image_url }}');">
         <h3></h3>
       </div>
     {% else %}
-      <div class="three"></div>
+      <div class="three" style="background-image: url('{{ 'image-3.png' | asset_url }}');"></div>
       <h3></h3>
     {% endif %}
   </div>
@@ -46,7 +46,7 @@
     height: 500px;
   }
   .two {
-    background-image: url(" {{  'image-2.png' | asset_url  }} ");
+    background-image: url(" {{ 'image-2.png' | asset_url }} ");
     background-position: center;
     background-size: cover;
     width: 33.33%;
@@ -61,7 +61,7 @@
     height: 500px;
   }
   .three {
-    background-image: url(" {{  'image-3.png' | asset_url  }} ");
+    background-image: url(" {{ 'image-3.png' | asset_url }} ");
     background-position: center;
     background-size: cover;
     width: 33.33%;
@@ -69,7 +69,7 @@
   }
 
   .three-user {
-    background-image: url('{{ section.settings.image3 | image_url }}');
+    background-image: url(' {{ section.settings.image3 | image_url }}');
     background-position: center;
     background-size: cover;
     width: 33.33%;
