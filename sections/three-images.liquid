@@ -29,7 +29,53 @@
   </div>
 </section>
 
-<style></style>
+<style>
+  .one {
+    background-image: url(" {{  'image-1.png' | asset_url  }} ");
+    background-position: center;
+    background-size: cover;
+    width: 33.33%;
+    height: 500px;
+  }
+
+  .one-user {
+    background-image: url('{{ section.settings.image1 | image_url }}');
+    background-position: center;
+    background-size: cover;
+    width: 33.33%;
+    height: 500px;
+  }
+  .two {
+    background-image: url(" {{  'image-2.png' | asset_url  }} ");
+    background-position: center;
+    background-size: cover;
+    width: 33.33%;
+    height: 500px;
+  }
+
+  .two-user {
+    background-image: url('{{ section.settings.image2 | image_url }}');
+    background-position: center;
+    background-size: cover;
+    width: 33.33%;
+    height: 500px;
+  }
+  .three {
+    background-image: url(" {{  'image-3.png' | asset_url  }} ");
+    background-position: center;
+    background-size: cover;
+    width: 33.33%;
+    height: 500px;
+  }
+
+  .three-user {
+    background-image: url('{{ section.settings.image3 | image_url }}');
+    background-position: center;
+    background-size: cover;
+    width: 33.33%;
+    height: 500px;
+  }
+</style>
 
 {% schema %}
 {
