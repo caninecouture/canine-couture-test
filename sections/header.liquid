@@ -1,0 +1,28 @@
+<nav>
+  {% render 'header' %}
+</nav>
+
+{% schema %}
+{
+  "name": "Navigation Header",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_logo",
+      "label": "Display logo",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "custom_message",
+      "label": "Custom message"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Header"
+    }
+  ]
+}
+{% endschema %}
