@@ -45,16 +45,3 @@ body {
     display: flex;
     justify-content: space-between;
 }
-
-.one {
-    background-image: url(" {{ 'image-1.jpg' | asset_url }} ");
-    background-size: cover;
-    width: 33.33%;
-    height: 500px;
-}
-
-.three-images-wrapper div {
-    height:200px;
-    width: 200px;
-
-}
