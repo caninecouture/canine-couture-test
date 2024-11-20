@@ -1,0 +1,11 @@
+:root {
+    --border-radius: 10px;
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --font-size-base: 16px;
+    --bg-main-color: {{ settings.background }};
+}
+
+section {
+    --main-bg-color: red;
+  }
