@@ -1,0 +1,85 @@
+<section class="more-info">
+  <div class="more-info-wrapper">
+    {% if section.settings.text1 != blank %}
+      <h1>THE RESOLUTION STARTER PACK</h1>
+    {% else %}
+      <h1>{{ section.settings.text1 }}</h1>
+    {% endif %}
+
+    {% if section.settings.text2 != blank %}
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua.
+      </p>
+    {% else %}
+      <p>{{ section.settings.text2 }}</p>
+    {% endif %}
+
+    <button>SHOP</button>
+  </div>
+</section>
+
+<style>
+   .more-info {
+     background: {{ section.settings.background }};
+     color:{{ section.settings.color }};
+     display:flex;
+     justify-content:center;
+   }
+   .more-info-wrapper {
+     display: flex;
+     flex-direction: column;
+     width: 500px;
+     justify-content: center;
+     align-items: center;
+   }
+  .h1 {
+     font-size: 50px;
+  }
+
+  .more-info-wrapper button {
+    padding: 10px 20px 10px 20px;
+    background-color: black;
+    border:none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+  }
+
+  .more-info-wrapper button:hover {
+    background-color: grey;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "more-info",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#F4F4F4"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "text1",
+      "label": "Text1",
+      "default": "default text"
+    },
+    {
+      "type": "text",
+      "id": "text2",
+      "label": "Text2",
+      "default": "default text2"
+    }
+  ]
+}
+{% endschema %}
