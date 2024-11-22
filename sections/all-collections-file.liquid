@@ -1,0 +1,24 @@
+<section class="all-collections">
+  <h1 class="">Features collections</h1>
+  <div class="collection-container">
+    <div class="collection-wrapper">
+      {% for collection in collections %}
+        <h3>{{ collection.title | link_to: collection.url }}</h3>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "all-collections",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header",
+      "default": "Featured Collections"
+    }
+  ]
+}
+{% endschema %}
