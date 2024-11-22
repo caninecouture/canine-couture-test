@@ -1,6 +1,6 @@
 <section class="more-info">
   <div class="more-info-wrapper">
-    {% if section.settings.h1 != blank %}
+    {% if section.settings.h1 == blank %}
       <h1>THE RESOLUTION STARTER PACK</h1>
     {% else %}
       <h1>{{ section.settings.h1 }}</h1>
@@ -33,7 +33,8 @@
      justify-content: center;
      align-items: center;
    }
-  .h1 {
+
+   h1 {
      font-size: 50px;
   }
 
@@ -54,7 +55,7 @@
 
 {% schema %}
 {
-  "name": "more-info",
+  "name": "More-info",
   "settings": [
     {
       "type": "color",
@@ -79,6 +80,11 @@
       "id": "yo-1",
       "label": "Paragraphe",
       "default": "default text2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "more-info"
     }
   ]
 }
