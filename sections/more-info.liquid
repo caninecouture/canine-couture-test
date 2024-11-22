@@ -3,7 +3,7 @@
     {% if section.settings.text1 != blank %}
       <h1>THE RESOLUTION STARTER PACK</h1>
     {% else %}
-      <h1>{{ section.settings.text1 }}</h1>
+      <h1>{{ section.settings.h1 }}</h1>
     {% endif %}
 
     {% if section.settings.text2 != blank %}
@@ -70,8 +70,8 @@
     },
     {
       "type": "text",
-      "id": "text1",
-      "label": "Text1",
+      "id": "h1",
+      "label": "H1",
       "default": "default text"
     },
     {
