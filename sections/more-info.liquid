@@ -1,18 +1,18 @@
 <section class="more-info">
   <div class="more-info-wrapper">
-    {% if section.settings.text1 != blank %}
+    {% if section.settings.h1 != blank %}
       <h1>THE RESOLUTION STARTER PACK</h1>
     {% else %}
       <h1>{{ section.settings.h1 }}</h1>
     {% endif %}
 
-    {% if section.settings.text2 != blank %}
+    {% if section.settings.paragraphe != blank %}
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
         dolore magna aliquyam erat, sed diam voluptua.
       </p>
     {% else %}
-      <p>{{ section.settings.text2 }}</p>
+      <p>{{ section.settings.paragraphe }}</p>
     {% endif %}
 
     <button>SHOP</button>
@@ -22,7 +22,7 @@
 <style>
    .more-info {
      background: {{ section.settings.background }};
-     color:{{ section.settings.color }};
+     color:{{ section.settings.text_color }};
      display:flex;
      justify-content:center;
    }
@@ -76,8 +76,8 @@
     },
     {
       "type": "text",
-      "id": "text2",
-      "label": "Text2",
+      "id": "paragraphe",
+      "label": "Paragraphe",
       "default": "default text2"
     }
   ]
