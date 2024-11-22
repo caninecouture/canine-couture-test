@@ -6,13 +6,13 @@
       <h1>{{ section.settings.h1 }}</h1>
     {% endif %}
 
-    {% if section.settings.paragraphe != blank %}
+    {% if section.settings['yo-1'] != blank %}
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
         dolore magna aliquyam erat, sed diam voluptua.
       </p>
     {% else %}
-      <p>{{ section.settings.paragraphe }}</p>
+      <p>{{ section.settings['yo-1'] }}</p>
     {% endif %}
 
     <button>SHOP</button>
@@ -76,7 +76,7 @@
     },
     {
       "type": "text",
-      "id": "paragraphe",
+      "id": "yo-1",
       "label": "Paragraphe",
       "default": "default text2"
     }
